@@ -1,0 +1,19 @@
+{
+  "name": "the-praline-scene",
+  "version": "1.0.0",
+  "description": "Premium e-commerce website for The Praline Scene - family-owned New Orleans pralines",
+  "main": "index.js",
+  "scripts": {
+    "start": "open index.html",
+    "build": "echo 'Build process here'",
+    "deploy": "echo 'Deploy to Shopify'"
+  },
+  "keywords": [
+    "pralines",
+    "new orleans",
+    "e-commerce",
+    "shopify"
+  ],
+  "author": "The Praline Scene",
+  "license": "MIT"
+}

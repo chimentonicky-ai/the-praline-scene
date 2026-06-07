@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The Praline Scene - Authentic New Orleans pralines made by hand. Family-owned, small-batch, shipped fresh nationwide.">
+    <meta name="keywords" content="pralines, New Orleans, handmade, gourmet, desserts">
+    <title>The Praline Scene - Authentic New Orleans Pralines</title>
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <div class="logo">The Praline Scene</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#story">Our Story</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-right">
+                <div class="cart-icon">🛒 <span class="cart-count">0</span></div>
+                <div class="account-icon">👤</div>
+                <button class="cta-button">Order Now</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Authentic New Orleans Pralines Made By Hand</h1>
+            <p>Small-batch Southern pralines crafted from a cherished family recipe and shipped fresh nationwide.</p>
+            
+            <div class="hero-cta">
+                <button class="btn-primary" onclick="scrollToSection('shop')">Shop Pralines</button>
+                <button class="btn-secondary" onclick="scrollToSection('story')">Our Story</button>
+            </div>
+
+            <div class="trust-badges">
+                <div class="badge">Handmade Daily</div>
+                <div class="badge">Small Batch</div>
+                <div class="badge">Freshly Shipped</div>
+                <div class="badge">Authentic New Orleans Recipe</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="products" id="shop">
+        <h2 class="section-title">Featured Pralines</h2>
+        
+        <div class="product-grid">
+            <!-- Product 1: Original New Orleans Pralines -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="assets/images/products/original-pralines.jpg" alt="Original New Orleans Pralines">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Original New Orleans Pralines</h3>
+                    <p class="product-description">Traditional creamy New Orleans pralines made with roasted pecans and rich caramelized sugar.</p>
+                    <div class="product-pricing">
+                        <div class="price-tier"><span>Single</span> <span>$3.49</span></div>
+                        <div class="price-tier"><span>6 Pack</span> <span>$17.99</span></div>
+                        <div class="price-tier"><span>12 Pack</span> <span>$32.99</span></div>
+                        <div class="price-tier"><span>18 Pack</span> <span>$46.99</span></div>
+                        <div class="price-tier"><span>24 Pack</span> <span>$59.99</span></div>
+                    </div>
+                    <button class="add-to-cart" onclick="addToCart('product-1', 'Original New Orleans Pralines', 32.99)">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 2: Chocolate Drizzled Pralines -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="assets/images/products/chocolate-drizzled.jpg" alt="Chocolate Drizzled Pralines">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Chocolate Drizzled Pralines</h3>
+                    <p class="product-description">Classic pralines finished with luxurious chocolate drizzle.</p>
+                    <div class="product-pricing">
+                        <div class="price-tier"><span>6 Pack</span> <span>$19.99</span></div>
+                        <div class="price-tier"><span>12 Pack</span> <span>$36.99</span></div>
+                        <div class="price-tier"><span>18 Pack</span> <span>$52.99</span></div>
+                        <div class="price-tier"><span>24 Pack</span> <span>$67.99</span></div>
+                    </div>
+                    <button class="add-to-cart" onclick="addToCart('product-2', 'Chocolate Drizzled Pralines', 36.99)">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 3: Half-Dipped Chocolate Pralines -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="assets/images/products/half-dipped.jpg" alt="Half-Dipped Chocolate Pralines">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Half-Dipped Chocolate Pralines</h3>
+                    <p class="product-description">Handmade pralines partially dipped in premium milk chocolate.</p>
+                    <div class="product-pricing">
+                        <div class="price-tier"><span>6 Pack</span> <span>$21.99</span></div>
+                        <div class="price-tier"><span>12 Pack</span> <span>$39.99</span></div>
+                        <div class="price-tier"><span>18 Pack</span> <span>$57.99</span></div>
+                        <div class="price-tier"><span>24 Pack</span> <span>$72.99</span></div>
+                    </div>
+                    <button class="add-to-cart" onclick="addToCart('product-3', 'Half-Dipped Chocolate Pralines', 39.99)">Add to Cart</button>
+                </div>
+            </div>
+
+            <!-- Product 4: Praline Crumble -->
+            <div class="product-card">
+                <div class="product-image">
+                    <img src="assets/images/products/praline-crumble.jpg" alt="Praline Crumble">
+                </div>
+                <div class="product-info">
+                    <h3 class="product-name">Praline Crumble</h3>
+                    <p class="product-description">Finely chopped praline pieces perfect for ice cream, cheesecake, coffee, yogurt, baking, and desserts.</p>
+                    <div class="product-pricing">
+                        <div class="price-tier"><span>8 oz Bag</span> <span>$9.99</span></div>
+                        <div class="price-tier"><span>16 oz Bag</span> <span>$16.99</span></div>
+                        <div class="price-tier"><span>32 oz Bag</span> <span>$29.99</span></div>
+                    </div>
+                    <button class="add-to-cart" onclick="addToCart('product-4', 'Praline Crumble', 16.99)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works">
+        <h2 class="section-title">How It Works</h2>
+        <div class="steps-grid">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Handcrafted Daily</h3>
+                <p>Every praline is made by hand in small batches using our treasured family recipe.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Fresh Packaging</h3>
+                <p>Packed carefully in our signature gift boxes with premium presentation.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Delivered To Your Door</h3>
+                <p>Fresh Southern sweetness shipped nationwide so you enjoy them at their best.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits" style="padding: var(--spacing-2xl) var(--spacing-lg); max-width: 1200px; margin: 0 auto;">
+        <h2 class="section-title">Why Customers Love The Praline Scene</h2>
+        <div class="benefits-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--spacing-xl);">
+            <div class="benefit-item" style="text-align: center;">
+                <h3 style="color: var(--caramel); margin-bottom: var(--spacing-md);">🏺 Authentic New Orleans</h3>
+                <p style="color: var(--text-light);">Family recipe passed down through generations</p>
+            </div>
+            <div class="benefit-item" style="text-align: center;">
+                <h3 style="color: var(--caramel); margin-bottom: var(--spacing-md);">👐 Handmade Daily</h3>
+                <p style="color: var(--text-light);">Small batches crafted with care and attention to detail</p>
+            </div>
+            <div class="benefit-item" style="text-align: center;">
+                <h3 style="color: var(--caramel); margin-bottom: var(--spacing-md);">🥜 Fresh Pecans</h3>
+                <p style="color: var(--text-light);">Premium ingredients in every bite</p>
+            </div>
+            <div class="benefit-item" style="text-align: center;">
+                <h3 style="color: var(--caramel); margin-bottom: var(--spacing-md);">🎁 Premium Gift Packaging</h3>
+                <p style="color: var(--text-light);">Beautiful presentation perfect for gifting</p>
+            </div>
+            <div class="benefit-item" style="text-align: center;">
+                <h3 style="color: var(--caramel); margin-bottom: var(--spacing-md);">📦 Nationwide Shipping</h3>
+                <p style="color: var(--text-light);">Fresh pralines delivered anywhere in the USA</p>
+            </div>
+            <div class="benefit-item" style="text-align: center;">
+                <h3 style="color: var(--caramel); margin-bottom: var(--spacing-md);">❤️ Family-Owned</h3>
+                <p style="color: var(--text-light);">A business built on tradition and passion</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section class="story" id="story" style="background-color: var(--primary-pink); padding: var(--spacing-2xl) var(--spacing-lg);">
+        <div style="max-width: 900px; margin: 0 auto; text-align: center;">
+            <h2 class="section-title">A Family Tradition Worth Sharing</h2>
+            <p style="font-size: 1.1rem; color: var(--text-light); line-height: 1.8; margin-bottom: var(--spacing-lg);">
+                For generations, our family has perfected the art of making authentic New Orleans pralines. What started as a cherished family recipe has blossomed into a passion for sharing Southern tradition with families across America.
+            </p>
+            <p style="font-size: 1.1rem; color: var(--text-light); line-height: 1.8;">
+                Every praline we make is a labor of love—handcrafted in small batches, made fresh daily, and shipped to your doorstep with care. We believe that the best pralines are those made with authentic ingredients, genuine passion, and a commitment to quality that never wavers.
+            </p>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="reviews">
+        <h2 class="section-title">What Our Customers Say</h2>
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"These taste exactly like the pralines I remember buying in New Orleans."</p>
+                <p class="testimonial-author">- Sarah M.</p>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"The chocolate-dipped pralines are absolutely addictive."</p>
+                <p class="testimonial-author">- James T.</p>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"Beautiful packaging and incredible flavor."</p>
+                <p class="testimonial-author">- Maria L.</p>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"Perfect gift for family and friends."</p>
+                <p class="testimonial-author">- Robert K.</p>
+            </div>
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p class="testimonial-text">"The freshest pralines I've ever had."</p>
+                <p class="testimonial-author">- Jennifer W.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq" style="background-color: var(--cream); padding: var(--spacing-2xl) var(--spacing-lg); max-width: 900px; margin: 0 auto;">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div style="display: flex; flex-direction: column; gap: var(--spacing-lg);">
+            <div>
+                <h3 style="color: var(--chocolate-brown); margin-bottom: var(--spacing-sm);">How long do pralines stay fresh?</h3>
+                <p style="color: var(--text-light);">Typically 2–3 weeks when stored properly in a cool, dry place.</p>
+            </div>
+            <div>
+                <h3 style="color: var(--chocolate-brown); margin-bottom: var(--spacing-sm);">Do you ship nationwide?</h3>
+                <p style="color: var(--text-light);">Yes, we ship anywhere in the United States with care and tracking.</p>
+            </div>
+            <div>
+                <h3 style="color: var(--chocolate-brown); margin-bottom: var(--spacing-sm);">Are they made fresh?</h3>
+                <p style="color: var(--text-light);">Every batch is handmade fresh before shipping to ensure maximum freshness and flavor.</p>
+            </div>
+            <div>
+                <h3 style="color: var(--chocolate-brown); margin-bottom: var(--spacing-sm);">Are these authentic New Orleans pralines?</h3>
+                <p style="color: var(--text-light);">Yes, made using a traditional family recipe that has been perfected over generations.</p>
+            </div>
+            <div>
+                <h3 style="color: var(--chocolate-brown); margin-bottom: var(--spacing-sm);">Can I send them as gifts?</h3>
+                <p style="color: var(--text-light);">Absolutely! Our premium gift packaging is perfect for gifting, and gift notes are available.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="final-cta" style="background: linear-gradient(135deg, var(--caramel), var(--chocolate-brown)); padding: var(--spacing-2xl) var(--spacing-lg); text-align: center; color: white;">
+        <h2 style="font-size: var(--heading-size-lg); margin-bottom: var(--spacing-lg);">Bring Home A Taste Of New Orleans</h2>
+        <p style="font-size: 1.25rem; margin-bottom: var(--spacing-xl);">Handcrafted pralines delivered fresh to your doorstep.</p>
+        <button class="btn-primary" onclick="scrollToSection('shop')" style="background-color: white; color: var(--chocolate-brown); border: none;">Order Your Pralines Today</button>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>The Praline Scene</h4>
+                <p>Authentic New Orleans pralines made by hand.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#shop">Shop</a></li>
+                    <li><a href="#story">Our Story</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#">Shipping Info</a></li>
+                    <li><a href="#">Returns</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Newsletter</h4>
+                <p>Subscribe for special offers and new flavors.</p>
+                <input type="email" placeholder="your@email.com" style="padding: 10px; border: none; border-radius: 4px; width: 100%; margin-top: 10px;">
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 The Praline Scene. All rights reserved. Authentic New Orleans pralines made with love.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/utils.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
