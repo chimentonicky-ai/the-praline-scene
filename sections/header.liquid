@@ -1,0 +1,106 @@
+<header class="site-header">
+  <nav class="navbar">
+    <div class="navbar-content">
+      <div class="logo">
+        <a href="{{ '/' | url }}">
+          {{ shop.name }}
+        </a>
+      </div>
+      
+      <ul class="nav-links">
+        <li><a href="{{ '/' | url }}">Home</a></li>
+        <li><a href="{{ '/collections/all' | url }}">Shop</a></li>
+        {% if pages.about %}
+          <li><a href="{{ pages.about.url }}">Our Story</a></li>
+        {% endif %}
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="{{ '/pages/contact' | url }}">Contact</a></li>
+      </ul>
+      
+      <div class="nav-right">
+        <a href="{{ '/cart' | url }}" class="cart-icon">
+          🛒 <span class="cart-count">{{ cart.item_count }}</span>
+        </a>
+        <button class="cta-button">Order Now</button>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<style>
+  .site-header {
+    background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar {
+    padding: 1rem 2rem;
+  }
+  
+  .navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+  
+  .logo {
+    font-family: 'Georgia', serif;
+    font-size: 1.5rem;
+    color: #5c4033;
+    font-weight: bold;
+  }
+  
+  .logo a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: #2c2c2c;
+    transition: color 150ms ease-in-out;
+  }
+  
+  .nav-links a:hover {
+    color: #c9944a;
+  }
+  
+  .nav-right {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+  }
+  
+  .cta-button {
+    background-color: #c9944a;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 150ms ease-in-out;
+  }
+  
+  .cta-button:hover {
+    background-color: #5c4033;
+  }
+  
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+    }
+  }
+</style>

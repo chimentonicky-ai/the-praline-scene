@@ -1,0 +1,9 @@
+{
+  "current": "development",
+  "development": {
+    "password": "",
+    "theme_id": "",
+    "store": "",
+    "ignore_files": []
+  }
+}

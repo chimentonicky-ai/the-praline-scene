@@ -1,0 +1,90 @@
+<section class="testimonials">
+  <h2>{{ section.settings.title }}</h2>
+  
+  <div class="testimonial-grid">
+    {% for testimonial in section.blocks %}
+      <div class="testimonial-card">
+        <div class="stars">★★★★★</div>
+        <p class="testimonial-text">"{{ testimonial.settings.text }}"</p>
+        <p class="testimonial-author">- {{ testimonial.settings.author }}</p>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+<style>
+  .testimonials {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .testimonials h2 {
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+  
+  .testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  
+  .testimonial-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .stars {
+    color: #d4af37;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+  }
+  
+  .testimonial-text {
+    color: #2c2c2c;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+  }
+  
+  .testimonial-author {
+    color: #c9944a;
+    font-weight: bold;
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Testimonials",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Title",
+      "default": "What Our Customers Say"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "testimonial",
+      "name": "Testimonial",
+      "settings": [
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Testimonial Text"
+        },
+        {
+          "type": "text",
+          "id": "author",
+          "label": "Author Name"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

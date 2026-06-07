@@ -1,0 +1,181 @@
+<section class="hero">
+  <div class="hero-content">
+    <h1>{{ section.settings.heading }}</h1>
+    <p>{{ section.settings.subheading }}</p>
+    
+    <div class="hero-cta">
+      <a href="{{ section.settings.primary_cta_link }}" class="btn-primary">
+        {{ section.settings.primary_cta_text }}
+      </a>
+      <a href="{{ section.settings.secondary_cta_link }}" class="btn-secondary">
+        {{ section.settings.secondary_cta_text }}
+      </a>
+    </div>
+    
+    <div class="trust-badges">
+      {% for badge in section.settings.badges %}
+        <div class="badge">{{ badge.badge_text }}</div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    background: linear-gradient(135deg, rgba(244, 214, 216, 0.8), rgba(255, 255, 255, 0.8));
+    padding: 8rem 2rem 4rem;
+    text-align: center;
+    color: #2c2c2c;
+  }
+  
+  .hero-content {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  .hero h1 {
+    font-family: 'Georgia', serif;
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+  }
+  
+  .hero p {
+    font-size: 1.25rem;
+    color: #666666;
+    margin-bottom: 2rem;
+  }
+  
+  .hero-cta {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-bottom: 4rem;
+    flex-wrap: wrap;
+  }
+  
+  .btn-primary, .btn-secondary {
+    padding: 1.5rem 3rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: all 300ms ease-in-out;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  .btn-primary {
+    background-color: #c9944a;
+    color: white;
+    border: none;
+  }
+  
+  .btn-primary:hover {
+    background-color: #5c4033;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  }
+  
+  .btn-secondary {
+    background-color: transparent;
+    color: #5c4033;
+    border: 2px solid #5c4033;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #5c4033;
+    color: white;
+  }
+  
+  .trust-badges {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 4rem;
+  }
+  
+  .badge {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: #666666;
+  }
+  
+  .badge::before {
+    content: '✓';
+    color: #c9944a;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+  
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2rem;
+    }
+    
+    .hero-cta {
+      flex-direction: column;
+    }
+    
+    .btn-primary, .btn-secondary {
+      width: 100%;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "Hero Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Authentic New Orleans Pralines Made By Hand"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Small-batch Southern pralines crafted from a cherished family recipe and shipped fresh nationwide."
+    },
+    {
+      "type": "url",
+      "id": "primary_cta_link",
+      "label": "Primary CTA Link"
+    },
+    {
+      "type": "text",
+      "id": "primary_cta_text",
+      "label": "Primary CTA Text",
+      "default": "Shop Pralines"
+    },
+    {
+      "type": "url",
+      "id": "secondary_cta_link",
+      "label": "Secondary CTA Link"
+    },
+    {
+      "type": "text",
+      "id": "secondary_cta_text",
+      "label": "Secondary CTA Text",
+      "default": "Our Story"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "badge",
+      "name": "Badge",
+      "settings": [
+        {
+          "type": "text",
+          "id": "badge_text",
+          "label": "Badge Text"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

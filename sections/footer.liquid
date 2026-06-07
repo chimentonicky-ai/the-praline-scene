@@ -1,0 +1,101 @@
+<footer class="site-footer">
+  <div class="footer-content">
+    <div class="footer-section">
+      <h4>{{ shop.name }}</h4>
+      <p>Authentic New Orleans pralines made by hand.</p>
+    </div>
+    
+    <div class="footer-section">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="{{ '/' | url }}">Home</a></li>
+        <li><a href="{{ '/collections/all' | url }}">Shop</a></li>
+        <li><a href="{{ '/pages/about' | url }}">Our Story</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-section">
+      <h4>Support</h4>
+      <ul>
+        <li><a href="{{ '/pages/faq' | url }}">FAQ</a></li>
+        <li><a href="{{ '/pages/contact' | url }}">Contact</a></li>
+        <li><a href="{{ '/policies/shipping-policy' | url }}">Shipping</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-section">
+      <h4>Newsletter</h4>
+      <p>Subscribe for special offers and new flavors.</p>
+      {% form 'customer' %}
+        <input type="email" placeholder="your@email.com" required>
+      {% endform %}
+    </div>
+  </div>
+  
+  <div class="footer-bottom">
+    <p>&copy; {{ 'now' | date: '%Y' }} {{ shop.name }}. All rights reserved.</p>
+  </div>
+</footer>
+
+<style>
+  .site-footer {
+    background-color: #5c4033;
+    color: #faf8f5;
+    padding: 4rem 2rem;
+    margin-top: 4rem;
+  }
+  
+  .footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .footer-section h4 {
+    color: #d4af37;
+    margin-bottom: 1.5rem;
+  }
+  
+  .footer-section ul {
+    list-style: none;
+  }
+  
+  .footer-section ul li {
+    margin-bottom: 0.5rem;
+  }
+  
+  .footer-section a {
+    color: #faf8f5;
+    text-decoration: none;
+    transition: color 150ms ease-in-out;
+  }
+  
+  .footer-section a:hover {
+    color: #d4af37;
+  }
+  
+  .footer-section input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    margin-top: 10px;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.875rem;
+  }
+  
+  @media (max-width: 768px) {
+    .footer-content {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
